@@ -1,0 +1,755 @@
+/* 清除内外边距 */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* 清除浮动 */
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+
+/* 取消所有无序列表小点 */
+
+li {
+    list-style: none;
+}
+
+
+/* 页面的版心 */
+
+.w {
+    width: 1202px;
+    margin: 0 auto;
+}
+
+
+/* 链接下划线 */
+
+a {
+    text-decoration: none;
+}
+
+
+/* 整个页面背景色 */
+
+body {
+    background: #f3f5f7;
+}
+
+
+/* header部分 */
+
+.header {
+    height: 42px;
+    margin: 30px auto;
+}
+
+.header .logo {
+    float: left;
+    width: 195px;
+    height: 42px;
+}
+
+.header .nav {
+    float: left;
+    margin-left: 60px;
+}
+
+.header .nav ul li {
+    float: left;
+    margin: 0 12px;
+}
+
+.header .nav ul li a {
+    display: block;
+    height: 42px;
+    padding: 0 10px;
+    line-height: 42px;
+    font-size: 18px;
+    color: #050505;
+}
+
+.header .nav ul li a:hover {
+    border-bottom: 2px solid #00a4ff;
+}
+
+.header .search {
+    float: left;
+    width: 420px;
+    height: 40px;
+    float: left;
+    margin-left: 75px;
+}
+
+.header .search .text {
+    float: left;
+    width: 360px;
+    height: 40px;
+    border: 1px solid #00a4ff;
+    border-right: 0;
+    font-size: 14px;
+    color: #bfbfbf;
+    text-indent: 19px;
+}
+
+.header .search .button {
+    float: left;
+    width: 50px;
+    height: 42px;
+    border: 0;
+    background-image: url("images/fa-search.png");
+}
+
+.userImg * {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.header .user {
+    float: left;
+    height: 42px;
+    margin-left: 31px;
+}
+
+.header .user img {
+    float: left;
+    margin-top: 6px;
+    background-image: url("images/user.png");
+    background-repeat: no-repeat;
+}
+
+.header .user .userName {
+    float: right;
+    margin-left: 6px;
+    line-height: 42px;
+    font-size: 14px;
+    color: #666;
+}
+
+
+/* banner部分 */
+
+.banner {
+    height: 420px;
+    background-color: #1c036c;
+}
+
+.banner .shlidesshow {
+    background: url("images/banner2.png") no-repeat top center;
+    height: 420px;
+}
+
+.banner .shlidesshow .subnav {
+    float: left;
+    width: 192px;
+    height: 420px;
+    background-color: rgba(20, 2, 75, 0.5);
+}
+
+.banner .shlidesshow .subnav ul li {
+    padding: 0 20px;
+    height: 45px;
+    line-height: 45px;
+}
+
+.banner .shlidesshow .subnav ul li a {
+    font-size: 14px;
+    color: #fff;
+}
+
+.banner .shlidesshow .subnav ul {
+    padding-top: 7.5px;
+    padding-bottom: 7.5px;
+}
+
+.banner .shlidesshow .subnav ul li a span {
+    float: right;
+}
+
+.banner .shlidesshow .subnav ul li a:hover {
+    color: #00b4ff;
+}
+
+.banner .course {
+    float: right;
+    margin-top: 50px;
+    width: 230px;
+    height: 300px;
+}
+
+.banner .course .title h2 {
+    height: 48px;
+    line-height: 48px;
+    font-size: 18px;
+    text-align: center;
+    color: #fff;
+    background-color: #9bceea;
+}
+
+.banner .course .mark {
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 252px;
+    background-color: #fff;
+}
+
+.banner .course .mark h4 {
+    font-size: 16px;
+}
+
+.banner .course .mark h5 {
+    font-size: 14px;
+}
+
+.banner .course .mark h4,
+h5 {
+    display: inline-block;
+    color: #4e4e4e;
+}
+
+.banner .course .mark p {
+    font-size: 12px;
+    color: #a5a5a5;
+}
+
+.banner .course .mark .course1,
+.course2,
+.course3 {
+    padding: 14px 0;
+    border-bottom: 1px solid #a5a5a5;
+}
+
+.banner .course .mark .moreCourse {
+    display: block;
+    margin-top: 5px;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    color: #00a4ff;
+    font-size: 16px;
+    font-weight: 700;
+    border: 1px solid #00a4ff;
+}
+
+
+/* 精品推荐模块 */
+
+.goods {
+    margin-top: 10px;
+    height: 60px;
+    line-height: 60px;
+    background-color: #fff;
+    box-shadow: 0 2px 3px 3px rgba(226, 227, 229, 0.5);
+}
+
+.goods h3 {
+    float: left;
+    margin-left: 30px;
+    font-size: 16px;
+    color: #00a4ff;
+}
+
+.goods ul {
+    float: left;
+    margin-left: 30px;
+}
+
+.goods ul li {
+    float: left;
+}
+
+.goods ul li a {
+    padding: 0 30px;
+    height: 16px;
+    font-size: 16px;
+    color: #050505;
+    border-left: 1px solid #ccc;
+}
+
+.mod {
+    float: right;
+    margin-right: 30px;
+    font-size: 14px;
+    color: #00a4ff;
+}
+
+
+/* 核心内容模块 */
+
+.box ul #allLi a:hover {
+    box-shadow: 0 0 3px 3px rgba(226, 227, 229, 0.5);
+}
+
+.box #allInfo .level {
+    color: #ff7c2d;
+}
+
+.box #allInfo .point {
+    margin: 0 10px;
+}
+
+.box .allTitle .chooes1:hover,
+.chooes2:hover,
+.chooes3:hover,
+.chooes4:hover {
+    color: #00a4ff;
+}
+
+.box .allTitle .footerTitle:hover {
+    color: #00a4ff;
+}
+
+
+/* 核心内容模块-精品推荐 */
+
+.box {
+    margin-top: 35px;
+}
+
+.box .mainTitle1 h3 {
+    float: left;
+    font-size: 20px;
+    color: #494949;
+}
+
+.box .mainTitle1 a {
+    float: right;
+    font-size: 14px;
+    margin-top: 10px;
+    margin-right: 30px;
+    color: #a5a5a5;
+}
+
+.box .mainTitle1 a:hover {
+    color: #00a4ff;
+}
+
+.box .mainMark1 {
+    margin-top: 20px;
+    float: left;
+}
+
+.box .mainMark1 ul {
+    width: 1225px;
+}
+
+.box .mainMark1 ul li a {
+    position: relative;
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    width: 230px;
+    height: 270px;
+    background: #fff;
+}
+
+.box .mainMark1 ul li a .last1,
+.last2 {
+    margin-right: 0px;
+}
+
+.box .mainMark1 ul li a>img {
+    width: 100%;
+}
+
+.box .mainMark1 ul li a h4 {
+    margin: 20px 20px 20px 25px;
+    font-size: 14px;
+    color: #050505;
+    font-weight: 400;
+}
+
+.box .mainMark1 ul li a em {
+    position: absolute;
+    top: 4px;
+    right: -4px;
+}
+
+.box .mainMark1 ul li a .info {
+    margin: 0 20px 0 25px;
+    font-size: 12px;
+    color: #999;
+}
+
+.box .mainMark1 ul li a .info span {
+    color: #ff7c2d;
+}
+
+.box .mainMark1 ul li a:hover {
+    box-shadow: 0 0 3px 3px rgba(226, 227, 229, 0.5);
+}
+
+
+/* 核心内容模块-编程入门 */
+
+.box .allTitle {
+    position: relative;
+    float: left;
+    padding-top: 40px;
+}
+
+.box .allTitle h3 {
+    float: left;
+    font-size: 20px;
+    color: #494949;
+}
+
+.box .allTitle ul {
+    float: right;
+    margin-right: 308px;
+}
+
+.box .allTitle ul li {
+    float: right;
+}
+
+.box .allTitle ul li .chooes1,
+.chooes2,
+.chooes3,
+.chooes4 {
+    padding-right: 70px;
+    font-size: 16px;
+    color: #868686;
+}
+
+.box .allTitle .footerTitle {
+    position: absolute;
+    right: 0;
+    float: right;
+    font-size: 14px;
+    margin-top: 10px;
+    margin-right: 30px;
+    color: #a5a5a5;
+}
+
+.box .mainMark2 .ad-left {
+    padding-top: 20px;
+    float: left;
+}
+
+.box .mainMark2 .ad-left a {
+    width: 229px;
+    height: 393px;
+    float: left;
+}
+
+.box .mainMark2 .ad-top {
+    padding: 20px 0 0 14px;
+    float: left;
+}
+
+.box .mainMark2 .ad-top a {
+    width: 959px;
+    height: 102px;
+    float: left;
+}
+
+.box .mainMark2 .easy {
+    padding-top: 20px;
+    padding-left: 14px;
+    float: left;
+}
+
+.box .mainMark2 .easy li {
+    float: left;
+    margin-right: 13px;
+    background: #fff;
+}
+
+.box .mainMark2 .easy li a {
+    position: relative;
+    float: left;
+    width: 230px;
+    height: 270px;
+}
+
+.box .mainMark2 .easy li a img {
+    width: 100%;
+}
+
+.box .mainMark2 .easy .last {
+    margin-right: 0;
+}
+
+.box .mainMark2 .easy h3 {
+    float: left;
+    margin-top: 15px;
+    margin-left: 25px;
+    margin-right: 20px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #050505;
+}
+
+.box .mainMark2 .easy div {
+    position: absolute;
+    bottom: 25px;
+    float: left;
+    margin-left: 25px;
+    font-size: 12px;
+    color: #999;
+}
+
+.box .mainMark3 .ad-left {
+    padding-top: 20px;
+    float: left;
+}
+
+.box .mainMark3 .ad-left a {
+    width: 229px;
+    height: 393px;
+    float: left;
+}
+
+.box .mainMark3 .ad-top {
+    padding: 20px 0 0 14px;
+    float: left;
+}
+
+.box .mainMark3 .ad-top a {
+    width: 959px;
+    height: 102px;
+    float: left;
+}
+
+.box .mainMark3 .easy {
+    padding-top: 20px;
+    padding-left: 14px;
+    float: left;
+}
+
+.box .mainMark3 .easy li {
+    float: left;
+    margin-right: 13px;
+    background: #fff;
+}
+
+.box .mainMark3 .easy li a {
+    position: relative;
+    float: left;
+    width: 230px;
+    height: 270px;
+}
+
+.box .mainMark3 .easy li a img {
+    width: 100%;
+}
+
+.box .mainMark3 .easy .last {
+    margin-right: 0;
+}
+
+.box .mainMark3 .easy h3 {
+    float: left;
+    margin-top: 15px;
+    margin-left: 25px;
+    margin-right: 20px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #050505;
+}
+
+.box .mainMark3 .easy div {
+    position: absolute;
+    bottom: 25px;
+    float: left;
+    margin-left: 25px;
+    font-size: 12px;
+    color: #999;
+}
+
+.box .mainMark4 {
+    width: 1250px;
+}
+
+.box .mainMark4 .easy {
+    margin-top: 20px;
+    float: left;
+}
+
+.box .mainMark4 .easy li {
+    float: left;
+    background: #fff;
+    padding-right: 15px;
+}
+
+.box .mainMark4 .easy li a {
+    position: relative;
+    float: left;
+    width: 230px;
+    height: 270px;
+}
+
+.box .mainMark4 .easy li a img {
+    width: 100%;
+}
+
+.box .mainMark4 .easy li a h3 {
+    float: left;
+    margin-top: 15px;
+    margin-left: 25px;
+    margin-right: 20px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #050505;
+}
+
+.box .mainMark4 .easy li a div {
+    position: absolute;
+    bottom: 25px;
+    float: left;
+    margin-left: 25px;
+    font-size: 12px;
+    color: #999;
+}
+
+.box .mainMark4 .easy .last {
+    padding-right: 0;
+}
+
+.box .mainMark5 {
+    width: 1250px;
+}
+
+.box .mainMark5 .easy {
+    margin-top: 20px;
+    float: left;
+}
+
+.box .mainMark5 .easy li {
+    float: left;
+    background: #fff;
+    padding-right: 15px;
+}
+
+.box .mainMark5 .easy li a {
+    position: relative;
+    float: left;
+    width: 230px;
+    height: 270px;
+}
+
+.box .mainMark5 .easy li a img {
+    width: 100%;
+}
+
+.box .mainMark5 .easy li a h3 {
+    float: left;
+    margin-top: 15px;
+    margin-left: 25px;
+    margin-right: 20px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #050505;
+}
+
+.box .mainMark5 .easy li a div {
+    position: absolute;
+    bottom: 25px;
+    float: left;
+    margin-left: 25px;
+    font-size: 12px;
+    color: #999;
+}
+
+.box .mainMark5 .easy .last {
+    padding-right: 0;
+}
+
+
+/* leftNav */
+
+.liftNav {
+    position: fixed;
+    left: 147px;
+    bottom: 30%;
+    width: 185px;
+    height: 430px;
+    text-align: center;
+    line-height: 35px;
+    background: #fff;
+    box-shadow: 0 0 3px 3px rgba(226, 227, 229, 0.5);
+}
+
+.liftNav ul {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.liftNav ul li a {
+    font-size: 14px;
+    color: #000;
+}
+
+.liftNav ul li a:hover {
+    color: #00a4ff;
+}
+
+
+/* footer */
+
+.footer {
+    margin-top: 40px;
+    height: 415px;
+    background-color: #fff;
+}
+
+.footer .footerCenter {
+    padding-top: 66px;
+}
+
+.footer .footerCenter .copyright {
+    float: left;
+}
+
+.footer .footerCenter .copyright p {
+    font-size: 12px;
+    color: #666;
+    margin: 20px 0 15px 0;
+}
+
+.footer .footerCenter .copyright .app {
+    display: block;
+    width: 118px;
+    height: 33px;
+    font-size: 16px;
+    text-align: center;
+    line-height: 33px;
+    color: #00a4ff;
+    border: 1px solid #00a4ff;
+}
+
+.footer .links {
+    float: right;
+}
+
+.footer .links dl {
+    float: left;
+    margin-left: 145px;
+}
+
+.footer .links dl dt {
+    margin-top: 5px;
+    font-size: 16px;
+    color: #666;
+}
+
+.footer .links dl dd a {
+    font-size: 12px;
+    color: #333;
+}
