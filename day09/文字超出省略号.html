@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 单行 */
+        
+        .box1 {
+            width: 150px;
+            height: 80px;
+            background-color: yellowgreen;
+            margin: 100px auto;
+            white-space: normal;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        /* 多行 */
+        
+        .box2 {
+            width: 150px;
+            height: 80px;
+            background-color: yellowgreen;
+            margin: 100px auto;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">
+        12w34r567890iuhgfd
+    </div>
+    <div class="box2">
+        啥也不说，此处省略一万字，啥也不说，此处省略一万字此处
+    </div>
+</body>
+
+</html>
