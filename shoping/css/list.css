@@ -1,0 +1,141 @@
+/* 列表页专有的css */
+
+.nav {
+    overflow: hidden;
+}
+
+.sk {
+    position: absolute;
+    left: 190px;
+    top: 40px;
+    border-left: 1px solid #c81523;
+    padding: 3px 0 0 14px;
+}
+
+.sk_list {
+    float: left;
+}
+
+.sk_list ul li {
+    float: left;
+}
+
+.sk_list ul li a {
+    display: block;
+    line-height: 47px;
+    padding: 0 30px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+}
+
+.sk_con {
+    float: left;
+}
+
+.sk_con ul li {
+    float: left;
+}
+
+.sk_con ul li a {
+    display: block;
+    line-height: 49px;
+    padding: 0 20px;
+    font-size: 14px;
+}
+
+.sk_con ul li:last-child a::after {
+    content: '\e665';
+}
+
+.sk_bd ul li {
+    overflow: hidden;
+    margin-top: 20px;
+    float: left;
+    margin-right: 13px;
+    width: 290px;
+    height: 460px;
+    border: 1px solid transparent;
+}
+
+.sk_bd ul li:nth-child(4n) {
+    margin-right: 0;
+}
+
+.sk_bd ul li:hover {
+    border: 1px solid #c81523;
+}
+
+.sk_bd ul li img {
+    height: 300px;
+}
+
+.sk_bd ul li p {
+    margin: 0 12px;
+    font-size: 14px;
+    color: #8c8c8c;
+}
+
+.sk_bd ul li .price {
+    margin-top: 5px;
+    margin-left: 12px;
+    font-size: 22px;
+    font-weight: 700;
+    color: #e60012;
+}
+
+.sk_bd ul li .price i {
+    margin-left: 8px;
+    text-decoration: line-through;
+    font-weight: 700;
+    font-size: 14px;
+    color: #a4a4a4
+}
+
+.sk_bd ul li .sk_box {
+    margin-top: 5px;
+    margin-left: 12px;
+}
+
+.sk_bd ul li .sk_box .right,
+.sk_bd ul li .sk_box .left {
+    display: inline-block;
+    color: #a3a3a3;
+}
+
+.sk_bd ul li .sk_box .bar {
+    display: inline-block;
+    margin: 0 10px;
+    width: 131px;
+    height: 12px;
+    border: 1px solid red;
+    border-radius: 7px;
+    padding: 1px;
+}
+
+.sk_bd ul li .sk_box .bar .bar-in {
+    display: block;
+    width: 90%;
+    height: 100%;
+    background-color: red;
+    /* 谁做过渡给谁加 */
+    transition: all .7s;
+}
+
+.sk_bd ul li .sk_box .bar:hover .bar-in {
+    width: 0%;
+}
+
+.sk_bd ul li .sk_footer {
+    margin-top: 5px;
+    height: 50px;
+    background-color: #b1191a;
+    text-align: center;
+    line-height: 50px;
+    color: #fff;
+    font-size: 20px;
+}
+
+.list_footer {
+    margin-top: 280px;
+}

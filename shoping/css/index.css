@@ -274,9 +274,10 @@
     height: 100%;
 }
 
-.floor {
+
+/* .floor {
     height: 10000px;
-}
+} */
 
 
 /* 猜你喜欢 */
@@ -446,4 +447,199 @@
 .czbk .czbk_content ul .czbk_content-logo .goods-13 {
     width: 100%;
     height: 404px;
+}
+
+
+/* 家用电器 */
+
+.appliance .appliance_hd {
+    margin-top: 30px;
+    height: 30px;
+    border-bottom: 2px solid #c81623;
+}
+
+.appliance .appliance_hd h3 {
+    float: left;
+    font-size: 18px;
+    font-weight: 400;
+    color: #c81623;
+}
+
+.appliance .appliance_hd .tab_list {
+    float: right;
+    line-height: 30px;
+}
+
+.appliance .appliance_hd .tab_list ul li {
+    float: left;
+}
+
+.appliance .appliance_hd .tab_list ul li a {
+    margin: 0 15px;
+}
+
+.appliance .appliance_bd {
+    height: 361px;
+}
+
+.appliance .appliance_bd .tab_list_item>div {
+    float: left;
+    height: 361px;
+}
+
+.appliance .appliance_bd .col_210 {
+    width: 210px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.appliance .appliance_bd .col_210 ul li {
+    float: left;
+    width: 85px;
+    height: 34px;
+    border-bottom: 1px solid #e8e8e7;
+    text-align: center;
+    line-height: 33px;
+    margin-right: 10px;
+}
+
+.appliance .appliance_bd .col_210 ul {
+    padding-left: 12px;
+}
+
+.appliance .appliance_bd .col_329 {
+    width: 329px;
+}
+
+.appliance .appliance_bd .col_221 {
+    width: 221px;
+    border-right: 1px solid #e8e8e7;
+    border-bottom: 1px solid #e8e8e7;
+}
+
+.appliance .appliance_bd .col_219 {
+    width: 219px;
+    border-bottom: 1px solid #e8e8e7;
+    border-right: 1px solid #e8e8e7;
+}
+
+.appliance .appliance_bd .col_219 img {
+    width: 218px;
+}
+
+.appliance .appliance_bd .bb {
+    /* 一般情况下，a如果包含有宽度的盒子，a需要转为块级元素 */
+    display: block;
+    border-bottom: 1px solid #e8e8e7;
+    border-right: 1px solid #e8e8e7;
+}
+
+.appliance .appliance_logo {
+    padding-top: 20px;
+    height: 65px;
+}
+
+
+/* 手机通信 */
+
+.iphone .iphone_hd {
+    margin-top: 50px;
+    height: 30px;
+    border-bottom: 2px solid #c81623;
+}
+
+.iphone .iphone_hd h3 {
+    float: left;
+    font-size: 18px;
+    font-weight: 400;
+    color: #c81623;
+}
+
+.iphone .iphone_hd .tab_list {
+    float: right;
+    line-height: 30px;
+}
+
+.iphone .iphone_hd .tab_list ul li {
+    float: left;
+}
+
+.iphone .iphone_hd .tab_list ul li a {
+    margin: 0 15px;
+}
+
+.iphone .iphone_bd {
+    height: 361px;
+}
+
+.iphone .iphone_bd .tab_list_item>div {
+    float: left;
+    height: 361px;
+}
+
+.iphone .iphone_bd .col_210 {
+    width: 210px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.iphone .iphone_bd .col_210 .floor-2-1 {
+    padding: 25px;
+    width: 210px;
+    height: 258px;
+}
+
+.iphone .iphone_bd .col_210 ul li {
+    float: left;
+    width: 85px;
+    height: 34px;
+    border-bottom: 1px solid #e8e8e7;
+    text-align: center;
+    line-height: 33px;
+    margin-right: 10px;
+}
+
+.iphone .iphone_bd .col_210 ul {
+    padding-left: 12px;
+}
+
+.iphone .iphone_bd .col_329 {
+    width: 329px;
+}
+
+.iphone .iphone_bd .col_221 {
+    width: 221px;
+    border-right: 1px solid #e8e8e7;
+    border-bottom: 1px solid #e8e8e7;
+}
+
+.iphone .iphone_bd .col_221 .floor-2-2,
+.iphone .iphone_bd .col_221 .floor-2-3 {
+    width: 220px;
+    height: 180px;
+    padding-top: 25px;
+    padding-left: 15px;
+}
+
+.iphone .iphone_bd .col_219 {
+    width: 219px;
+    border-bottom: 1px solid #e8e8e7;
+    border-right: 1px solid #e8e8e7;
+}
+
+.iphone .iphone_bd .col_219 img {
+    width: 218px;
+}
+
+.iphone .iphone_bd .bb {
+    /* 一般情况下，a如果包含有宽度的盒子，a需要转为块级元素 */
+    display: block;
+    border-bottom: 1px solid #e8e8e7;
+    border-right: 1px solid #e8e8e7;
+}
+
+.iphone .iphone_logo {
+    padding-top: 20px;
+    height: 65px;
+    margin-bottom: 38px;
 }
