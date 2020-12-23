@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            overflow: hidden;
+            width: 200px;
+            height: 200px;
+            border: 1px solid yellowgreen;
+            margin: 100px auto;
+        }
+        
+        div::before {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-color: red;
+            transform: rotate(0deg);
+            transform-origin: left bottom;
+            transition: all 0.3s;
+        }
+        
+        div:hover::before {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+
+    </div>
+</body>
+
+</html>

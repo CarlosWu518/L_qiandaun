@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes move {
+            0% {
+                transform: translate(0px);
+            }
+            25% {
+                transform: translate(1620px, 0px);
+            }
+            50% {
+                transform: translate(1620px, 810px);
+            }
+            75% {
+                transform: translate(0px, 810px);
+            }
+            100% {
+                transform: translate(0px);
+            }
+        }
+        
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: yellowgreen;
+            animation-name: move;
+            animation-duration: 7s;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>

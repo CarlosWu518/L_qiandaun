@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        ul {
+            margin: 100px;
+        }
+        
+        ul li {
+            float: left;
+            width: 120px;
+            height: 35px;
+            list-style: none;
+            perspective: 500px;
+        }
+        
+        .box {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: all 0.4s;
+            transform-style: preserve-3d;
+        }
+        
+        .box:hover {
+            transform: rotateX(90deg);
+        }
+        
+        .front,
+        .back {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            font-size: 14px;
+            text-align: center;
+            line-height: 35px;
+            color: #fff;
+        }
+        
+        .front {
+            background-color: #000;
+            z-index: 1;
+            transform: translateZ(17.5px);
+        }
+        
+        .back {
+            background-color: red;
+            transform: translateY(17.5px) rotateX(-90deg);
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>
+            <div class="box">
+                <div class="front">我一定</div>
+                <div class="back">可以考上研</div>
+            </div>
+        </li>
+        <li>
+            <div class="box">
+                <div class="front">我一定</div>
+                <div class="back">可以找到好工作研</div>
+            </div>
+        </li>
+        <li>
+            <div class="box">
+                <div class="front">我一定</div>
+                <div class="back">可以月入过万</div>
+            </div>
+        </li>
+    </ul>
+</body>
+
+</html>
