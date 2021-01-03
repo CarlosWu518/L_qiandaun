@@ -1,0 +1,28 @@
+body {
+    // 约束大小
+   min-width: 320px;
+   max-width: 750px;
+   margin: 0 auto;
+   height: 1200px;
+}
+// 约束当屏幕大于750px 时，字体大小就不会变化了
+@media screen and (min-width: 750px){
+    html {
+        font-size: 37.5px  !important;
+    }
+}
+.header {
+    height: 2.133333rem;
+    border-bottom: 1px solid #EAEAEA;
+    text-align: center;
+    line-height: 2.133333rem;
+    font-size: .933333rem;
+    color: #1c1c1c;
+}
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    .item {
+        width: 33.333%;
+    }
+}
