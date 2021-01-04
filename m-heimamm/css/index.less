@@ -3,13 +3,17 @@ body {
    min-width: 320px;
    max-width: 750px;
    margin: 0 auto;
-   height: 1200px;
+   background-color: #F2F4F7;
 }
 // 约束当屏幕大于750px 时，字体大小就不会变化了
 @media screen and (min-width: 750px){
     html {
         font-size: 37.5px  !important;
     }
+}
+.warp {
+    background-color: #FFFFFF;
+    padding-bottom: 1.146667rem;
 }
 .header {
     height: 2.133333rem;
@@ -22,7 +26,176 @@ body {
 .nav {
     display: flex;
     flex-wrap: wrap;
+    padding: 1.173333rem 0 1.6rem 0;
     .item {
+        display: flex;
         width: 33.333%;
+        //纵向显示
+        flex-direction: column;
+        //居中
+        align-items: center;
+        img {
+            width: 3.706667rem;
+            height: 3.706667rem;
+        }
+        span {
+            font-size: .666667rem;
+            color: #707070;
+        }
+        &:nth-child(-n+3) {
+            margin-bottom: 1.84rem;
+        }
+    }
+}
+.go {
+    margin: 0 .266667rem 0 .48rem;
+}
+.content {
+      padding: 1.066667rem .64rem;
+      background-color: #FFFFFF;
+      margin-top: .266667rem;
+      .con-hd {
+          display: flex;
+          justify-content: space-between;
+          height: 1.013333rem;
+          line-height: 1.013333rem;
+          margin-bottom: 1.04rem;
+          h4 {
+              font-size: .746667rem;
+              color: #333333;
+              margin: 0;
+              .icon {
+                  display: inline-block;
+                  height: 1.013333rem;
+                  width: 1.013333rem; 
+                  vertical-align: middle;
+              }
+          }
+          .icon-MoreRight {
+            font-size: .586667rem;
+            color: #999999;
+            &::after{
+                 content: '\e651';     
+            }
+          }
+      }
+}
+.get_job_focus {
+    position: relative;
+    .swiper-container {
+         width: 14.4rem;
+        height: 100%;
+      }
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+  
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+        transition: 300ms;
+        transform: scale(0.8);
+        opacity: 0.4;
+        a{
+            width: 9.013333rem;
+            height: 10.026667rem;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        p {
+            font-size: .666667rem;
+            margin-top: .64rem;
+            width: 9.013333rem;
+            color: #333333;
+        }
+      }
+
+      .swiper-slide-active, 
+      .swiper-slide-duplicate-active {
+        transform: scale(1);
+        z-index: 999;
+        opacity: 1;
+      }
+      .swiper-button-next,.swiper-button-prev{
+          outline: none;
+          &::after{
+              font-size: .266667rem;
+              color: #333333;
+          }
+      }
+}
+.study_con {
+    padding-bottom: 3.733333rem;
+}
+.study {
+    
+    .study_fo {
+        padding: .266667rem;
+    }
+    .swiper-slide {
+        text-align: left;
+        font-size: 18px;
+        background: #fff;
+        width: 7.733333rem;
+        height: 8.066667rem;
+        border-radius:  .266667rem;
+        box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);
+        a {
+            img {
+                padding: .053333rem;
+            }
+        }
+        h5 {
+            font-size: .746667rem;
+            margin: .533333rem 0;
+            font-weight: 400;
+            padding: 0 .266667rem;
+        }     
+        p {
+            padding-left: .266667rem;
+            font-size: .693333rem;
+            color: #ff4400;
+        }
+    }
+}
+.footer {
+    position: fixed;
+    display: flex;
+    z-index: 99999;
+    left: 0;
+    bottom: 0;
+    height: 2.933333rem;
+    width: 100%;
+    padding: .533333rem;
+    border-top: 1px solid #ccc;
+    background-color: #fff;
+    .item {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        img {
+            width: 1.04rem;
+            height: 1.12rem;
+        }
+        p {
+            font-size: .586667rem;
+            color: #666666;
+            margin-top: .266667rem;
+        }
     }
 }
