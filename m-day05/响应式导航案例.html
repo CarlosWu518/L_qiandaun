@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .container {
+            width: 750px;
+            margin: 0 auto;
+        }
+        
+        .container ul {
+            list-style: none;
+        }
+        
+        .container ul li {
+            float: left;
+            text-align: center;
+            width: 93.75px;
+            height: 30px;
+            border-right: 1px solid #333;
+            color: #fff;
+            background-color: yellowgreen;
+        }
+        
+        .container ul li:nth-child(1) {
+            border-left: 1px solid #333;
+        }
+        
+        @media screen and (max-width: 767px) {
+            .container {
+                width: 100%;
+            }
+            .container ul li {
+                width: 33.333%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <ul>
+            <li>8</li>
+            <li>8</li>
+            <li>8</li>
+            <li>8</li>
+            <li>8</li>
+            <li>8</li>
+            <li>8</li>
+            <li>8</li>
+        </ul>
+    </div>
+</body>
+
+</html>
