@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var number = prompt('请输入班级的人数')
+        if (isNaN(number)) {
+            alert('请输入正确的班级人数');
+        } else {
+            var and = 0;
+            for (i = 1; i <= parseInt(number); i++) {
+                var point = prompt('第' + i + '学生的成绩');
+                and = parseInt(point) + and;
+            }
+            alert('班级的平均值是:' + and / parseInt(number));
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
