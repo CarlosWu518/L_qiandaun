@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var product = 0;
+        var str = ''
+        for (i = 1; i <= 9; i++) {
+            for (j = 1; j <= i; j++) {
+                product = i * j;
+
+                // alert(j + 'x' + i + '=' + product)
+                str += j + 'X' + i + '=' + product + ' '
+            }
+            str = str + '\n'
+
+        }
+        //   console.log(j + 'x' + i + '=' + product)
+        console.log(str)
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

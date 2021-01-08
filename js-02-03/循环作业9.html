@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var money = 100.00;
+        for (;;) {
+            var systems = prompt("请输入你要的操作：\n 1.存钱 \n 2.取钱 \n 3.显示余额 \n 4.退出")
+            if (systems == '1') {
+                var systems_1 = prompt('请输入您存取的金额')
+                money += parseFloat(systems_1);
+                alert('存入成功');
+            } else if (systems == '2') {
+                var systems_2 = prompt('请输入您取出的金额')
+                if (money < parseFloat(systems_2)) {
+                    alert('余额不足')
+                } else {
+                    money -= parseFloat(systems_2);
+                    alert('取出成功')
+                }
+            } else if (systems == '3') {
+                alert('查询成功，你的账余额是：' + money);
+            } else if (systems == '4') {
+                alert('系统已退出，欢迎您下次使用')
+                break;
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
