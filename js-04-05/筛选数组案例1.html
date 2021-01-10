@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var arr = [2, 0, 6, 1, 77, 0, 52, 0, 25, 7];
+        var newArr = [];
+        var count = -1;
+        for (var i = 0; i < arr.length; i++) {
+
+            if (arr[i] > 10) {
+                count++;
+                newArr[count] = arr[i]
+            } else {
+                continue;
+            }
+        }
+        for (var i = 0; i < newArr.length; i++) {
+            console.log(newArr[i])
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
