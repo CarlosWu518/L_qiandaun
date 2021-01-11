@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Max() {
+            var num1 = parseInt(prompt("请输入第一个数字"));
+            var num2 = parseInt(prompt("请输入第二个数字"));
+            var num3 = parseInt(prompt("请输入第三个数字"));
+            var result;
+            if (num1 > num2) {
+                if (num1 > num3) {
+                    result = num1;
+                } else {
+                    result = num3;
+                }
+            } else {
+                if (num2 > num3) {
+                    result = num2;
+                } else {
+                    result = num3;
+                }
+            }
+            alert(result)
+            return result;
+        }
+        Max();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
