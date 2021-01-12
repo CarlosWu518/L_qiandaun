@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Car(weight, color, brand) {
+            this.weight = weight;
+            this.color = color;
+            this.brand = brand;
+            this.zaiRen = function(person) {
+                console.log(person);
+            }
+        }
+        var car = new Car(1000, 'red', 'infinite');
+        console.log(car.weight, car.color, car.brand);
+        car.zaiRen(18)
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
