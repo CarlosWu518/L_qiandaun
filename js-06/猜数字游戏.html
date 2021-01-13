@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function getGuessMum(min, max) {
+            return Math.floor(Math.random() * (max + min + 1)) + min;
+        }
+        var number = getGuessMum(1, 100);
+        var guess = prompt('输入你猜测的数字');
+        var count = 0;
+        for (var i = 1; i <= 10; i++) {
+            if (i <= 10) {
+                count = 10 - i
+
+                if (i != 1) {
+                    guess = prompt('重新输入你猜测的数字');
+                }
+                if (guess > number) {
+
+                    if (count == 0) {
+                        alert('你的机会已经用完了')
+                        break;
+                    }
+                    alert('你猜测的数字太大，你还有' + count + '次机会');
+                } else if (guess < number) {
+
+                    if (count == 0) {
+                        alert('你的机会已经用完了')
+                        break;
+                    }
+                    alert('你猜测的数字太小，你还有' + count + '次机会');
+                } else {
+                    alert('猜对了');
+                    break;
+                }
+
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
