@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var str = 'abcoefoxyozzopp';
+        var o = {};
+        for (var i = 0; i < str.length; i++) {
+            var chars = str.charAt(i);
+            if (o[chars]) {
+                o[chars]++;
+            } else {
+                o[chars] = 1;
+            }
+
+        }
+        console.log(o);
+        var max = 0;
+        var ch = '';
+        for (var key in o) {
+            if (o[key] > max) {
+                max = o[key];
+                ch = key;
+            }
+        }
+        console.log(max);
+        console.log(ch);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

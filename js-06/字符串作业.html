@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var str = 'abaasdlffggghhjjkkgfddsssss3444343'
+        var strLong = str.length;
+        console.log(strLong);
+        var str0 = str.charAt(0);
+        var str3 = str.charAt(3);
+        var str5 = str.charAt(5);
+        var str9 = str.charAt(9);
+        console.log(str0, str3, str5, str9);
+        var indexi = str.indexOf('i');
+        if (indexi == -1) {
+            console.log(false);
+        } else {
+            console.log(true);
+        }
+        var indexg = str.indexOf('g');
+        var gg = '';
+        while (indexg != -1) {
+            gg = str.replace(str.charAt(indexg), '22');
+            str = gg;
+            indexg = str.indexOf('g', indexg + 1);
+        }
+        console.log(gg);
+        str = 'abaasdlffggghhjjkkgfddsssss3444343'
+        var strjq = str.substr(1, 5);
+        console.log(strjq);
+        var lastStr = {};
+        for (var i = 0; i < str.length; i++) {
+            var chars = str.charAt(i)
+            if (lastStr[chars]) {
+                lastStr[chars]++;
+            } else {
+                lastStr[chars] = 1;
+            }
+        }
+        console.log(lastStr);
+        var max = 0;
+        var ch = '';
+        for (var key in lastStr) {
+            if (lastStr[key] > max) {
+                max = lastStr[key];
+                ch = key;
+            }
+        }
+        console.log(max);
+        console.log(ch);
+        // var index = str.indexOf('3')
+        // while (index != -1) {
+        //     console.log(index);
+        //     index = str.indexOf('3', index + 1);
+        // }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
