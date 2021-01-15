@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="aaa">111</div>
+    <script>
+        //1.因为我们文档页面从上往下加载，所以先得有标签，所以script写在标签下面
+        //2.get获得element元素by通过驼峰命名法
+        //3.参数id是大小写敏感的字符串
+        //4.返回的一个元素对象
+        var timer = document.getElementById('aaa');
+        console.log(timer);
+        //5.打印返回的元素对象，可以查看里面的属性和方法；
+        console.dir(timer);
+    </script>
+</body>
+
+</html>

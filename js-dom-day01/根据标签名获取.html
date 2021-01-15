@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li>111111111</li>
+        <li>111111111</li>
+        <li>111111111</li>
+        <li>111111111</li>
+        <li>111111111</li>
+        <li>111111111</li>
+        <li>111111111</li>
+        <li>111111111</li>
+    </ul>
+    <script>
+        //返回的是 获取过来元素对象的集合，以伪数组的形式存储的
+        var lis = document.getElementsByTagName('li');
+        console.log(lis);
+
+        for (var i = 0; i < lis.length; i++) {
+            console.log(lis[i]);
+
+        }
+    </script>
+</body>
+
+</html>
