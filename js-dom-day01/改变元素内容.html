@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>显示当前系统时间</button>
+    <div>某个时间</div>
+    <script>
+        //当我们点击了按钮，div里面的文字会发生变化
+        //1.获取元素
+        var btn = document.querySelector('button');
+        var div = document.querySelector('div');
+        //2.注册事件
+        btn.onclick = function() {
+            div.innerText = '2021-1-15';
+        }
+    </script>
+</body>
+
+</html>
