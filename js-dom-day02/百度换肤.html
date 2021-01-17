@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            position: relative;
+            background: url("images/1.jpg") no-repeat center top;
+            background-size: cover;
+        }
+        
+        .baidu {
+            display: flex;
+            position: absolute;
+            flex: 4;
+            top: 8rem;
+            right: 5.333333rem;
+            left: 5.333333rem;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+        
+        .baidu li {
+            list-style: none;
+        }
+        
+        .baidu li img {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="baidu">
+        <li><img src="images/1.jpg" alt="3"></li>
+        <li><img src="images/2.jpg" alt="3"></li>
+        <li><img src="images/3.jpg" alt="3"></li>
+        <li><img src="images/4.jpg" alt="3"></li>
+    </ul>
+    <script>
+        //1.获取元素
+        var imgs = document.querySelector('.baidu').querySelectorAll('img');
+        for (var i = 0; i < imgs.length; i++) {
+            imgs[i].onclick = function() {
+                document.body.style.backgroundImage = 'url(' + this.src + ')';
+            }
+        }
+    </script>
+</body>
+
+</html>
