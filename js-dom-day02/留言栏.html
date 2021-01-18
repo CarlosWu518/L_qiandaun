@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        
+        .comment {
+            width: 800px;
+            margin: 100px auto;
+        }
+        
+        .comment .sendText {
+            position: relative;
+            width: 100%;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #cccccc;
+        }
+        
+        .comment .sendText img {
+            float: left;
+            margin: 7px 0 0 5px;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+        }
+        
+        .comment .sendText .error {
+            position: absolute;
+            top: -55px;
+            right: -35px;
+            width: 158px;
+            height: 46px;
+            font-size: 14px;
+            text-align: center;
+            line-height: 46px;
+            border-radius: 5px;
+            display: none;
+            background-color: rgba(233, 61, 61, .9);
+            color: #fff;
+        }
+        
+        .comment .sendText textarea {
+            display: block;
+            margin-left: 85px;
+            border-radius: 5px;
+            font-size: 12px;
+            padding: 5px 10px;
+            height: 65px;
+            resize: none;
+            border: 1px solid #e5e9ef;
+            color: #757575;
+            background: #f4f5f7;
+        }
+        
+        .comment .sendText textarea:hover {
+            background: #fff;
+            border: 1px solid #00a1d6;
+        }
+        
+        .comment .sendText textarea:focus,
+        .comment .sendText button:focus {
+            outline: none;
+            border: 1px solid #00a1d6
+        }
+        
+        .comment .sendText button {
+            position: absolute;
+            right: 0;
+            top: 0;
+            font-size: 14px;
+            width: 70px;
+            height: 65px;
+            border: none;
+            border-radius: 5px;
+            padding: 4px 15px;
+            color: #fff;
+            background-color: #00a1d6;
+        }
+        
+        .comment .sendText button:hover {
+            background-color: #00b5e5;
+            cursor: pointer;
+        }
+        
+        .comment ul li {
+            list-style: none;
+            height: 140px;
+            font-size: 14px;
+            text-align: left;
+            line-height: 140px;
+            border-bottom: 1px solid #cccccc;
+        }
+        
+        .textBorOver {
+            border: 1px solid #00a1d6 !important;
+        }
+        
+        .textBorOut {
+            border: 1px solid #e5e9ef !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="comment">
+        <div class="sendText">
+            <img src="images/1.jpg" alt="">
+            <span class="error">你还没有评论！</span>
+            <textarea name="" id="" cols="95" rows="5" placeholder="发表友善的评论"></textarea>
+            <button type="submit">发表评论</button>
+        </div>
+        <ul>
+
+        </ul>
+    </div>
+    <script>
+        var text = document.querySelector('textarea');
+        var error = document.querySelector('span')
+        var btn = document.querySelector('button');
+        var ul = document.querySelector('ul');
+        btn.onmouseover = function() {
+            text.className = 'textBorOver';
+        }
+        btn.onmouseout = function() {
+            text.className = 'textBorOut';
+        }
+        btn.onclick = function() {
+            if (text.value == '') {
+                error.style.display = 'block';
+                setTimeout(function() {
+                    error.style.display = 'none';
+                }, 5000);
+                return false;
+            } else {
+                var li = document.createElement('li');
+                li.innerHTML = text.value;
+                ul.appendChild(li);
+
+            }
+        }
+    </script>
+</body>
