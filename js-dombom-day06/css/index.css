@@ -1,0 +1,105 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.circleColor {
+    background-color: #fff;
+}
+
+.header {
+    position: relative;
+    width: 721px;
+    height: 455px;
+    margin: 100px auto;
+}
+
+@font-face {
+    font-family: 'iconfont';
+    src: url('../font/iconfont.eot');
+    src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'), url('../font/iconfont.woff2') format('woff2'), url('../font/iconfont.woff') format('woff'), url('../font/iconfont.ttf') format('truetype'), url('../font/iconfont.svg#iconfont') format('svg');
+}
+
+[class^="icon-"],
+[class*="icon-"] {
+    font-family: "iconfont" !important;
+    font-style: normal;
+}
+
+
+/* 图部分 */
+
+.header .wrapper {
+    overflow: hidden;
+}
+
+.header .wrapper ul {
+    position: relative;
+    width: 1000%;
+}
+
+.header .wrapper ul li {
+    float: left;
+    overflow: hidden;
+    list-style: none;
+}
+
+
+/* 左右箭头 */
+
+.header .icon-right,
+.header .icon-left {
+    position: absolute;
+    display: none;
+    cursor: pointer;
+    width: 60px;
+    height: 80px;
+    top: 208px;
+    font-size: 35px;
+    text-align: center;
+    line-height: 80px;
+    color: #000;
+}
+
+.header .icon-right {
+    right: 0;
+}
+
+.header .icon-right:hover {
+    transition: all .5s;
+    background-color: rgba(117, 120, 122, .3);
+    color: #fff;
+}
+
+.header .icon-left {
+    left: 0;
+}
+
+.header .icon-left:hover {
+    background-color: rgba(117, 120, 122, .3);
+    color: #fff;
+}
+
+
+/* 小圆点 */
+
+.header .pagination {
+    position: absolute;
+    bottom: 15px;
+    left: 45%;
+}
+
+.header .pagination ol li {
+    float: left;
+    margin-left: 5px;
+    list-style: none;
+    cursor: pointer;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+}

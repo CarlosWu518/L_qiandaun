@@ -1,0 +1,23 @@
+{
+  "id": "2358397",
+  "name": "lun'bo'tu",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "18566944",
+      "name": "right",
+      "font_class": "left",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "18758154",
+      "name": "right",
+      "font_class": "bottom",
+      "unicode": "e720",
+      "unicode_decimal": 59168
+    }
+  ]
+}

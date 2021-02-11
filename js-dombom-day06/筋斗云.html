@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            text-decoration: none;
+        }
+        
+        .c-nav {
+            position: relative;
+            margin: auto;
+            width: 1000px;
+            height: 100px;
+            border: 1px solid yellowgreen;
+        }
+        
+        .c-nav ul {
+            display: flex;
+        }
+        
+        .c-nav ul li {
+            padding-right: 10px;
+            line-height: 100px;
+            z-index: 999;
+        }
+        
+        .c-nav ul li a {
+            color: #000;
+        }
+        
+        .c-nav .cloud {
+            position: absolute;
+            top: 40px;
+            left: 0;
+            width: 65px;
+            height: 20px;
+            cursor: pointer;
+            background-color: rgba(195, 208, 139, .3);
+        }
+    </style>
+    <script>
+        window.addEventListener('load', function() {
+            var cloud = document.querySelector('.cloud');
+            var c_nav = document.querySelector('.c-nav');
+            var lis = c_nav.querySelectorAll('li');
+            //动画函数部分
+            function animate(obj, target, callback) {
+                // 先清除以前的定时器，只保留当前的一个定时器执行
+                clearInterval(obj.timer);
+                obj.timer = setInterval(function() {
+                    // 步长值写到定时器的里面
+                    // 把我们步长值改为整数 不要出现小数的问题
+                    var step = (target - obj.offsetLeft) / 10;
+                    step = step > 0 ? Math.ceil(step) : Math.floor(step);
+                    if (obj.offsetLeft == target) {
+                        // 停止动画 本质是停止定时器
+                        clearInterval(obj.timer);
+                        // 回调函数写到定时器结束里面
+                        callback && callback();
+                    }
+                    // 把每次加1 这个步长值改为一个慢慢变小的值  步长公式：(目标值 - 现在的位置) / 10
+                    obj.style.left = obj.offsetLeft + step + 'px';
+
+                }, 15);
+            }
+            var site = 0;
+            for (var i = 0; i < lis.length; i++) {
+
+                lis[i].addEventListener('mouseenter', function() {
+                    animate(cloud, this.offsetLeft);
+                });
+                lis[i].addEventListener('mouseleave', function() {
+                    animate(cloud, site);
+                });
+                lis[i].addEventListener('click', function() {
+                    site = this.offsetLeft
+
+                });
+            }
+        })
+    </script>
+</head>
+
+<body>
+    <div class="c-nav">
+        <span class="cloud"></span>
+        <ul>
+            <li>
+                <a href="#">首页新闻</a>
+            </li>
+            <li>
+                <a href="#">娱乐新闻</a>
+            </li>
+            <li>
+                <a href="#">军事新闻</a>
+            </li>
+            <li>
+                <a href="#">国家新闻</a>
+            </li>
+            <li>
+                <a href="#">八卦新闻</a>
+            </li>
+            <li>
+                <a href="#">首页新闻</a>
+            </li>
+            <li>
+                <a href="#">娱乐新闻</a>
+            </li>
+            <li>
+                <a href="#">军事新闻</a>
+            </li>
+            <li>
+                <a href="#">国家新闻</a>
+            </li>
+            <li>
+                <a href="#">八卦新闻</a>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
