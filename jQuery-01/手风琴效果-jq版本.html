@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jQuery.min.js"></script>
+    <style>
+        .box {
+            width: 777px;
+            height: 50px;
+            margin: 100px auto;
+        }
+        
+        .box ul {
+            list-style: none;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .box ul li {
+            float: left;
+            overflow: hidden;
+            transition: all .3s;
+            width: 50px;
+            height: 100%;
+            margin-left: 10px;
+            /* background-color: red; */
+        }
+        
+        .box ul li.current {
+            width: 200px;
+        }
+        
+        .box ul li a {
+            position: relative;
+            display: block;
+            text-decoration: none;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .box ul li a .big {
+            width: 200px;
+            height: 50px;
+            display: none;
+            background-color: yellow;
+        }
+        
+        .box ul li a .small {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 50px;
+            height: 50px;
+            background-color: green;
+        }
+        
+        .box ul li.current a .big {
+            display: block;
+        }
+        
+        .box ul li.current a .small {
+            display: none;
+        }
+    </style>
+    <script>
+        $(function() {
+            $(".box li").mouseenter(function() {
+                $(this).stop().animate({
+                    width: 200
+                }, 200).find(".small").stop().fadeOut().siblings(".big").stop().fadeIn();
+                $(this).siblings("li").stop().animate({
+                    width: 50
+                }, 200).find(".small").stop().fadeIn().siblings(".big").stop().fadeOut();
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div class="box">
+        <ul>
+            <li class="current">
+                <a href="#">
+                    <div class="big"></div>
+                    <div class="small"></div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="big"></div>
+                    <div class="small"></div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="big"></div>
+                    <div class="small"></div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="big"></div>
+                    <div class="small"></div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="big"></div>
+                    <div class="small"></div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="big"></div>
+                    <div class="small"></div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
