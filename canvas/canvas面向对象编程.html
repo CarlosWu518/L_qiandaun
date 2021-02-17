@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas width="1000" height="1000"></canvas>
+    <script>
+        var canvas = document.querySelector('canvas');
+        var ctx = canvas.getContext('2d');
+
+        function Rect(x, y, w, h, c) {
+            this.x = x;
+            this.y = y;
+            this.w = w;
+            this.h = h;
+            this.c = c;
+        };
+        Rect.prototype.update = function() {
+            this.x++;
+        };
+        Rect.prototype.render = function() {
+            ctx.fillStyle = this.c;
+            ctx.fillRect(this.x, this.y, this.w, this.h);
+        };
+        var r1 = new Rect(100, 100, 50, 50, "greenyellow");
+        setInterval(function() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            r1.update();
+            r1.render();
+        })
+    </script>
+</body>
+
+</html>

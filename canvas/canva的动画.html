@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas width="1000" height="600">
+    
+    </canvas>
+    <script>
+        //1.得到画布
+        var canvas = document.querySelector('canvas');
+        //2.获取上下文
+        var ctx = canvas.getContext('2d');
+        //设置颜色
+        ctx.fillStyle = "blue";
+        //信号量
+        var left = 100;
+        //动画过程
+        setInterval(function() {
+            //清除画布
+            ctx.clearRect(0, 0, 1000, 600);
+            //更新信号量
+            left++;
+            ctx.fillRect(left, 100, 100, 100, 100);
+        }, 20);
+    </script>
+</body>
+
+</html>
