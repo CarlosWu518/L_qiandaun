@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #result {
+            width: 200px;
+            height: 100px;
+            border: solid 1px #90b;
+        }
+    </style>
+</head>
+
+<body>
+    <button>点击发送请求</button>
+    <div id="result"></div>
+    <script>
+        //获取button元素
+        const btn = document.getElementsByTagName('button')[0];
+        const result = document.getElementById("result");
+        btn.onclick = () => {
+            //1.创建对象
+            const xhr = new XMLHttpRequest();
+            //2.初始化 设置请求方法和url
+            xhr.open('GET', 'http://localhost:8000/server');
+            //3.发送
+            xhr.send();
+            //4.事件绑定 处理微服务返回的结果
+            //on when当....时候
+            //readystate 是xhr对象中的属性，表示状态0 1 2 3 4
+            //change 改变 
+            xhr.onreadystatechange = () => {
+                //判断（服务端返回了所有结果）
+                if (xhr.readyState === 4) {
+                    //盘判断响应状态码 200 404 403 401 500
+                    //2xx 成功
+                    if (xhr.readyState >= 200 && xhr.readyState < 300) {
+                        //处理结果 行 头 空行 体
+                        //1.响应行
+                        console.log(xhr.status); //状态码
+                        console.log(xhr.statusText); //状态自负串
+                        console.log(xhr.getAllResponseHeaders()); //所有响应头
+                        console.log(xhr.response); //响应体
+                    } else {
+
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
