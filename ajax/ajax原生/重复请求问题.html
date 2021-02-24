@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>发送信息</button>
+    <button>点击取消</button>
+    <script>
+        //获取元素对象
+        const btns = document.querySelectorAll('button');
+        let x = null;
+        //标识变量
+        let isSending = false; //是否正在发送AJAX请求
+        btns[0].onclick = function() {
+                if (isSending) x.abort();
+                x = new XMLHttpRequest();
+                //修改 标识变量的值
+                isSending = true;
+                x.open('GET', 'http://localhost:8000/delay');
+                x.send();
+                x.onreadystatechange = function() {
+                    if (x.readyState === 4) {
+                        //修改标识变量
+                        isSending = false;
+                    }
+                }
+            }
+            // abort
+        btns[1].onclick = function() {
+            x.abort();
+        }
+    </script>
+</body>
+
+</html>

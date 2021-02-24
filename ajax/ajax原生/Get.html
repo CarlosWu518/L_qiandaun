@@ -33,18 +33,20 @@
             //on when当....时候
             //readystate 是xhr对象中的属性，表示状态0 1 2 3 4
             //change 改变 
-            xhr.onreadystatechange = () => {
+            xhr.onreadystatechange = function() {
                 //判断（服务端返回了所有结果）
                 if (xhr.readyState === 4) {
                     //盘判断响应状态码 200 404 403 401 500
                     //2xx 成功
-                    if (xhr.readyState >= 200 && xhr.readyState < 300) {
+                    if (xhr.status >= 200 && xhr.status < 300) {
                         //处理结果 行 头 空行 体
                         //1.响应行
-                        console.log(xhr.status); //状态码
-                        console.log(xhr.statusText); //状态自负串
-                        console.log(xhr.getAllResponseHeaders()); //所有响应头
-                        console.log(xhr.response); //响应体
+                        // console.log(xhr.status); //状态码
+                        // console.log(xhr.statusText); //状态自负串
+                        // console.log(xhr.getAllResponseHeaders()); //所有响应头
+                        // console.log(xhr.response); //响应体
+                        //设置result文本
+                        result.innerHTML = xhr.response;
                     } else {
 
                     }

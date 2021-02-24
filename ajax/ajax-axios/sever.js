@@ -38,13 +38,37 @@ app.get('/ie', (request, response) => {
         //设置响应
     response.send('HELLO IE')
 });
-app.get('/delay', (request, response) => {
+//延时响应
+app.all('/delay', (request, response) => {
     //设置响应头
     response.setHeader('Access-Control-Allow-Origin', '*');
+    response.setHeader('Access-Control-Allow-Headers', '*');
     setTimeout(() => {
         //设置响应
         response.send('延时响应');
-    }, 3000);
+    }, 1000);
+
+});
+//jQuery
+app.all('/jQuery-server', (request, response) => {
+    //设置响应头
+    response.setHeader('Access-Control-Allow-Origin', '*');
+    response.setHeader('Access-Control-Allow-Headers', '*');
+
+    const data = { name: 'CarlosWu', age: '24' };
+    //设置响应
+    response.send(JSON.stringify(data));
+
+});
+//axios
+app.all('/axios-server', (request, response) => {
+    //设置响应头
+    response.setHeader('Access-Control-Allow-Origin', '*');
+    response.setHeader('Access-Control-Allow-Headers', '*');
+
+    const data = { name: 'CarlosWu', age: '24' };
+    //设置响应
+    response.send(JSON.stringify(data));
 
 });
 //4.监听端口启动服务
