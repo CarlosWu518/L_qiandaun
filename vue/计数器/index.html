@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
+        button {
+            outline: none;
+            border: none;
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        #app {
+            position: relative;
+            width: 500px;
+            height: 100px;
+            border: solid 1px slategrey;
+            border-radius: 15px;
+        }
+        
+        #app .add {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 100px;
+            height: 100px;
+            font-size: 44px;
+            cursor: pointer;
+            transition: all 0.01s;
+            border-radius: 0 15px 15px 0;
+        }
+        
+        #app .add:active {
+            color: red;
+            font-size: 50px;
+        }
+        
+        #app .sub {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100px;
+            height: 100px;
+            font-size: 44px;
+            cursor: pointer;
+            transition: all 0.01s;
+            border-radius: 15px 0 0 15px;
+        }
+        
+        #app .sub:active {
+            color: red;
+            font-size: 50px;
+        }
+        
+        #app .text {
+            display: block;
+            position: absolute;
+            right: 100px;
+            width: 300px;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+            font-size: 44px;
+            font-family: Helvetica;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <button class="add" @click='add'>
+            +
+        </button>
+        <span class="text">
+               {{num}}
+        </span>
+        <button class="sub" @click='sub'>
+            -
+        </button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+                num: 1
+            },
+            methods: {
+                add: function() {
+                    if (this.num < 10) {
+                        this.num++;
+                    } else {
+                        return false;
+                    }
+                },
+                sub: function() {
+                    if (this.num > 0) {
+                        this.num--;
+                    } else {
+                        return false;
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
