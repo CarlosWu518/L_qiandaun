@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 300px;
+            height: 300px;
+            background-color: green;
+        }
+        
+        .box1 {
+            width: 300px;
+            height: 300px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <input type="checkbox" name="" id="" v-model='seen'>
+        <div class="box" v-if='seen'></div>
+        <div class="box1" v-else='seen'></div>
+    </div>
+    <script src="../node_modules/vue/dist/vue.min.js"></script>
+    <script>
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                seen: true,
+            }
+        })
+    </script>
+</body>
+
+</html>

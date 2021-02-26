@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .c-enter-active {
+            animation: bounce-in 1s;
+        }
+        
+        .c-leave-active {
+            animation: bounce-in 1s reverse;
+        }
+        
+        @keyframes bounce-in {
+            0% {
+                transform: scale(0);
+            }
+            50% {
+                transform: scale(2);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <button @click='show=!show'>放大缩小</button>
+        <transition name='c'>
+            <p v-show='show'>收到回复v谁不服阿波舞欸那边</p>
+        </transition>
+    </div>
+    <script src="../node_modules/vue/dist/vue.min.js"></script>
+    <script>
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                show: true,
+            }
+        })
+    </script>
+</body>
+
+</html>

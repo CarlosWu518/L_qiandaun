@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        #box {
+            width: 1000px;
+            height: 700px;
+        }
+    </style>
+    <!-- 步骤一：引入Echarts.js文件 -->
+    <script src="lib/echarts.min.js"></script>
+
+</head>
+
+<body>
+    <!-- 步骤二：准备一个呈现图标的盒子 -->
+    <div id="box"></div>
+    <script>
+        // 步骤三：初始化echarts实例对象
+        //参数，dom,决定图表最终呈现的位置
+        var mCharts = echarts.init(document.querySelector('div'));
+        var xDataArr = ['张三', '李四', '王五', '闰土', '小明', '茅台', '二姐', '大强']
+        var yDataArr = [70, 92, 87, 40, 92, 77, 99, 55]
+            // 步骤四：准备配置项
+        var option = {
+                xAxis: {
+                    type: 'category', //类目轴
+                    data: xDataArr
+                        //type: 'type'
+                },
+                yAxis: {
+                    type: 'value' //数值轴
+                        // type: 'category',
+                        // data: xDataArr
+                },
+                series: {
+                    name: '语文',
+                    type: 'bar', //line折线图 plr饼图
+                    markPoint: {
+                        data: [{
+                            type: 'max',
+                            name: '最大值'
+                        }, {
+                            type: 'min',
+                            name: '最小值'
+                        }]
+                    },
+                    markLine: {
+                        data: [{
+                            type: 'average',
+                            name: '平均值'
+                        }]
+                    },
+                    label: {
+                        show: true,
+                        rotate: 60,
+                        position: 'top'
+                    },
+                    barWith: '33%',
+                    data: yDataArr
+                }
+            }
+            //步骤五: 将配置项设置给echarts实例对象
+        mCharts.setOption(option);
+    </script>
+</body>
+
+</html>

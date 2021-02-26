@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" name="" id="" v-model='mathScore'>
+        <input type="text" name="" id="" v-model='englishScore'>
+        <input type="text" name="" id="" v-model='sumScore'>
+    </div>
+    <script src="../node_modules/vue/dist/vue.min.js"></script>
+    <script>
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                mathScore: 0,
+                englishScore: 0
+            },
+            computed: {
+                sumScore: {
+                    get: function() {
+                        return (this.mathScore - 0) + (this.englishScore - 0);
+                    },
+                    set: function(newSum) {
+                        var avgSore = newSum / 2;
+                        this.englishScore = avgSore;
+                        this.mathScore = avgSore;
+                    }
+                }
+
+            }
+        })
+    </script>
+</body>
+
+</html>

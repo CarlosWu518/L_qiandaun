@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box {
+            width: 600px;
+            height: 400px;
+        }
+    </style>
+    <!-- 步骤一：引入Echarts.js文件 -->
+    <script src="lib/echarts.min.js"></script>
+
+</head>
+
+<body>
+    <!-- 步骤二：准备一个呈现图标的盒子 -->
+    <div id="box"></div>
+    <script>
+        // 步骤三：初始化echarts实例对象
+        //参数，dom,决定图表最终呈现的位置
+        var mCharts = echarts.init(document.querySelector('div'));
+        // 步骤四：准备配置项
+        var option = {
+                xAxis: {
+                    type: 'category', //类目轴
+                    data: ['小明', '小红', '小王']
+                },
+                yAxis: {
+                    type: 'value' //数值轴
+                },
+                series: {
+                    name: '语文',
+                    type: 'bar', //line折线图 plr饼图
+                    data: [70, 92, 87]
+                }
+            }
+            //步骤五: 将配置项设置给echarts实例对象
+        mCharts.setOption(option);
+    </script>
+</body>
+
+</html>

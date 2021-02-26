@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div id="app" v-cloak>
+        <p v-upper-text="message">xxxxxxxx</p>
+    </div>
+    <script src="../node_modules/vue/dist/vue.min.js"></script>
+    <script>
+        Vue.directive('upper-text', {
+            bind: function(el) {
+                el.style.color = 'red'
+            },
+            inserted: function(el, binding) {
+                el.innerHTML = binding.value.toUpperCase()
+            }
+        })
+        new Vue({
+            el: '#app',
+            data: {
+                message: 'carloswu,加油干死前端'
+            }
+        })
+    </script>
+
+</body>
+
+</html>

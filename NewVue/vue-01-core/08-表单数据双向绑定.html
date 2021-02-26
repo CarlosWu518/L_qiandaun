@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <div id="demo">
+                <!-- @submit.prevent 阻止事件的默认行为，当前阻止的是action行为 -->
+            <form action="#" @submit.prevent="submitForm">
+                姓名(文本)：<input type="text" v-model="name">
+                <br><br>
+    
+                性别(单选按钮)：
+                    <input name="sex" type="radio" value="1" v-model="sex"/>男
+                    <input name="sex" type="radio" value="0" v-model="sex"/>女
+                <br><br>
+    
+                技能(多选框)：
+                    <input type="checkbox" name="skills" value="java" v-model="skills">Java开发
+                    <input type="checkbox" name="skills" value="vue" v-model="skills">Vue.js开发
+                    <input type="checkbox" name="skills" value="python" v-model="skills">Python开发
+                <br><br>
+    
+                城市(下拉框)：
+                <select name="citys" v-model="city">
+                    <option v-for="c in citys" :value="c.code">
+                        {{c.name}}
+                    </option>
+                </select>
+                <br><br>
+    
+                说明(多行文本)：<textarea cols="30" rows="5" v-model="desc"></textarea>
+                <br><br>
+                <button type="submit" >提交</button>
+            </form>
+        </div>
+
+        <script src="./node_modules/vue/dist/vue.js"></script>
+        <script>
+            new Vue({
+                el: '#demo',
+                data: {
+                    name: '',
+                    sex: '1',   //默认选中的是 男
+                    skills: ['vue', 'python'], //默认选中 Vue.js开发 、Python开发
+                    citys: [
+                        {code: 'bj', name: '北京'},
+                        {code: 'sh', name: '上海'},
+                        {code: 'gz', name: '广州'}
+                    ],
+                    city: 'sh', // 默认选中的城市：上海
+                    desc: ''
+                },
+                methods: {
+                    submitForm: function () { //处理提交表单
+                        //发送ajax异步处理
+                        alert(this.name + ', ' + this.sex + ', ' + this.skills +  ', ' + this.city + ', ' + this.desc)
+                    }
+                }
+            })
+        </script>
+    </body>
+</html>

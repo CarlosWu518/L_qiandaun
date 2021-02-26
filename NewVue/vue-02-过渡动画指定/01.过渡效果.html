@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .c-enter-active,
+        .c-leave-active {
+            transition: opacity 1s;
+        }
+        
+        .c-enter,
+        .c-leave-to {
+            opacity: 0;
+        }
+        
+        .cw-enter-active {
+            transition: all 1s;
+        }
+        
+        .cw-leave-active {
+            transition: all 5s;
+        }
+        
+        .cw-enter,
+        .cw-leave-to {
+            opacity: 0;
+            transform: translateX(10px);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <button @click='show = !show'>渐变过渡</button>
+        <transition name='c'>
+            <p v-show='show'>CarlosWuuuuuu</p>
+        </transition>
+    </div>
+    <div id="app1">
+        <button @click='show1 = !show1'>渐变过渡</button>
+        <transition name='cw'>
+            <p v-show='show1'>CarlosWuuuuuu</p>
+        </transition>
+    </div>
+    <script src="../node_modules/vue/dist/vue.min.js"></script>
+    <script>
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                show: true,
+            },
+            methods: {
+
+            },
+        })
+        var vm1 = new Vue({
+            el: '#app1',
+            data: {
+                show1: true,
+            },
+            methods: {
+
+            },
+        })
+    </script>
+</body>
+
+</html>
