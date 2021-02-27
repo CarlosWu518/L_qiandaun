@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>过滤器</title>
+</head>
+
+<body>
+    <div id="app">
+        <div>{{content | contentFilter}}</div>
+        <input :value="content | contentFilter"></input>
+        <p>{{javaScore|add(VueScore,CScore)}}</p>
+    </div>
+    <script src="../node_modules/vue/dist/vue.min.js"></script>
+    <script>
+        // 全区过滤器
+        Vue.filter('contentFilter', function(value) {
+            if (!value) {
+                return ''
+            }
+            return value.toString().toUpperCase().replace('TMD', '***').replace('SB', '**')
+        })
+        new Vue({
+            el: '#app',
+            data: {
+                content: '小伙子，TMD就是个sb',
+                javaScore: 90,
+                VueScore: 90,
+                CScore: 90,
+            },
+            //局部过滤器
+            filters: {
+                contentFilter(value) {
+                    if (!value) {
+                        return ''
+                    }
+                    return value.toString().toUpperCase().replace('TMD', '***').replace('SB', '**')
+                },
+                add(num1, num2, num3) {
+                    return num1 + num2 + num3
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

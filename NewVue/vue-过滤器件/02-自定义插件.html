@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>自定义插件</title>
+</head>
+<body>
+    <div id="app">
+        <span v-my-directive="content">  </span>
+    </div>
+    <script src="node_modules/vue/dist/vue.js"></script>
+    <!-- 要引入在vue.js下面 -->
+    <script src="js/plugins.js"></script>
+    <script>
+        //1. 引入插件MyPlugin， 其实就是安装 MyPlugin 插件
+        Vue.use(MyPlugin)
+
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                content: 'hello'
+            }
+        })
+        //调用插件中的实例 方法，注意是vm调用，不是Vue
+        // 注意，不要少了 $
+        vm.$myMethod('mengxuegu')
+
+        //调用全局方法，注意是 Vue进行调用，不是vm
+        Vue.myGlobalMethod()
+
+    </script>
+</body>
+</html>
