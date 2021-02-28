@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <h1>{{repData}}</h1>
+    </div>
+    <script src="../node_modules/vue/dist/vue.min.js"></script>
+    <script src="../node_modules/vue-resource/dist/vue-resource.min.js"></script>
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                repData: []
+            },
+            //发送异步请求
+            created() {
+                //Get
+                this.$http.get('http://127.0.0.1:5500/NewVue/vue-%E5%AE%9E%E4%BE%8B%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E5%92%8Caxios/da.json').then(response => {
+                    //回调函数需要使用箭头，不然this代表window
+                    this.repData = response.data
+                }, response => {
+                    console.log(response.statusText, response.status);
+                });
+            },
+        })
+    </script>
+</body>
+
+</html>

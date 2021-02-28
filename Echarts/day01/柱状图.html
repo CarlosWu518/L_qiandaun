@@ -33,8 +33,32 @@
         var mCharts = echarts.init(document.querySelector('div'));
         var xDataArr = ['张三', '李四', '王五', '闰土', '小明', '茅台', '二姐', '大强']
         var yDataArr = [70, 92, 87, 40, 92, 77, 99, 55]
+        var yDataArr1 = [70, 92, 87, 40, 92, 77, 99, 55]
             // 步骤四：准备配置项
         var option = {
+                title: {
+                    text: '成绩展示',
+                    textStyle: {
+                        color: 'red'
+                    },
+                    borderWidth: 5,
+                    borderColor: 'blue',
+                },
+                tooltip: {
+                    trigger: 'axis',
+                    // formatter: '{b}的成绩是{c}'
+                    formatter(arg) {
+                        return arg[0].name + '的分数是:' + arg[0].data
+                    }
+                },
+                toolbox: {
+                    feature: {
+                        saveAsImage: {},
+                        dataView: {},
+                        restore: {},
+                        dataZoom: {}
+                    }
+                },
                 xAxis: {
                     type: 'category', //类目轴
                     data: xDataArr
@@ -45,7 +69,10 @@
                         // type: 'category',
                         // data: xDataArr
                 },
-                series: {
+                legend: {
+                    data: ['语文', '数学']
+                },
+                series: [{
                     name: '语文',
                     type: 'bar', //line折线图 plr饼图
                     markPoint: {
@@ -70,7 +97,32 @@
                     },
                     barWith: '33%',
                     data: yDataArr
-                }
+                }, {
+                    name: '数学',
+                    type: 'bar', //line折线图 plr饼图
+                    markPoint: {
+                        data: [{
+                            type: 'max',
+                            name: '最大值'
+                        }, {
+                            type: 'min',
+                            name: '最小值'
+                        }]
+                    },
+                    markLine: {
+                        data: [{
+                            type: 'average',
+                            name: '平均值'
+                        }]
+                    },
+                    label: {
+                        show: true,
+                        rotate: 60,
+                        position: 'top'
+                    },
+                    barWith: '33%',
+                    data: yDataArr1
+                }]
             }
             //步骤五: 将配置项设置给echarts实例对象
         mCharts.setOption(option);

@@ -9,8 +9,12 @@
   "author": "carloswu",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.21.1",
     "express": "^4.17.1",
     "jquery": "^3.5.1",
-    "vue": "^2.6.10"
+    "pubsub-js": "^1.9.3",
+    "vue": "^2.6.10",
+    "vue-resource": "^1.5.1",
+    "vue-router": "^3.5.1"
   }
 }
