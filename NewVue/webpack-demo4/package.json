@@ -1,0 +1,27 @@
+{
+    "name": "newvue",
+    "version": "1.0.0",
+    "description": "first npm demo",
+    "main": "index.js",
+    "scripts": {
+        "show": "webpack -v",
+        "start": "node ./src/main.js",
+        "build": "webpack",
+        "watch": "webpack --watch"
+    },
+    "author": "carloswu",
+    "license": "ISC",
+    "dependencies": {
+        "axios": "^0.21.1",
+        "express": "^4.17.1",
+        "jquery": "^3.5.1",
+        "pubsub-js": "^1.9.3",
+        "vue": "^2.6.10",
+        "vue-resource": "^1.5.1",
+        "vue-router": "^3.5.1"
+    },
+    "devDependencies": {
+        "webpack": "^4.35.3",
+        "webpack-cli": "^3.3.6"
+    }
+}

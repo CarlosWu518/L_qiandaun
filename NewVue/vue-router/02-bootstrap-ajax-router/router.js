@@ -18,7 +18,11 @@
                     },
                     {
                         path: 'teach',
-                        component: Teach
+                        component: Teach,
+                        children: [{
+                            path: '/news/teach/detail/:id',
+                            component: TeachDetail
+                        }]
                     }
                 ]
             },
