@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        
+        #show {
+            position: relative;
+            width: 800px;
+            height: 500px;
+            overflow: hidden;
+        }
+        
+        #show video {
+            width: 100%;
+            height: 100%;
+        }
+        
+        #show span {
+            position: absolute;
+            top: 50px;
+            left: 800px;
+            color: #ccc;
+        }
+        
+        .text_inp {
+            width: 740px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="con">
+        <div id="show">
+            <video src="./zycbrm2.mp4" controls></video>
+        </div>
+        <div>
+            <input type="text" class="text_inp">
+            <input type="button" value="发送" class="btn">
+        </div>
+    </div>
+</body>
+<script>
+    var btn = document.querySelector(".btn");
+
+    function goto() {
+        var shows = document.querySelector('#show');
+        var spans = document.createElement("span");
+        var texts = document.querySelector(".text_inp").value;
+        spans.innerHTML = texts;
+        document.querySelector(".text_inp").value = "";
+        var v = Math.floor(Math.random() * (430) + 10);
+        spans.style.top = v + "px";
+        shows.appendChild(spans);
+        setInterval(() => {
+            var p = parseInt(getComputedStyle(spans).left)
+            spans.style.left = p - 1 + "px"
+        }, 10);
+    };
+    btn.addEventListener("click", () => {
+        goto();
+    });
+    document.onkeydown = function(e) {
+        if (e.keyCode === 13) {
+            goto();
+        }
+    }
+</script>
+
+</html>

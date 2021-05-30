@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>疫情通报</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
+        .con {
+            margin: 0 auto;
+            width: 1200px;
+            height: 200px;
+        }
+        
+        .con ul li {
+            float: left;
+            list-style: none;
+            text-align: center;
+            width: 300px;
+            height: 158px;
+        }
+        
+        .con ul li:nth-of-type(1) {
+            background: linear-gradient(to top, rgba(185, 50, 45, .452), white);
+            border-bottom: 6px solid red;
+        }
+        
+        .con ul li:nth-of-type(2) {
+            border-bottom: 6px solid yellow;
+            background: linear-gradient(to top, rgba(185, 176, 45, .452), white);
+        }
+        
+        .con ul li:nth-of-type(3) {
+            border-bottom: 6px solid green;
+            background: linear-gradient(to top, rgba(53, 176, 45, .452), white);
+        }
+        
+        .con ul li:nth-of-type(4) {
+            border-bottom: 6px solid black;
+            background: linear-gradient(to top, rgba(15, 15, 15, .452), white);
+        }
+        
+        .con ul li .number {
+            font-size: 45px;
+            font-weight: 700;
+        }
+        
+        .con ul li:nth-of-type(1) .number {
+            color: red;
+        }
+        
+        .con ul li:nth-of-type(2) .number {
+            color: yellow;
+        }
+        
+        .con ul li:nth-of-type(3) .number {
+            color: green;
+        }
+        
+        .con ul li:nth-of-type(4) .number {
+            color: black;
+        }
+        
+        .con ul li .texts {
+            font-size: 30px;
+            font-weight: 700;
+            color: rgba(0, 0, 0, .507);
+            height: 52px;
+            line-height: 52px;
+        }
+        
+        .con ul li .textInfo {
+            font-size: 25px;
+            color: rgba(0, 0, 0, .507);
+            height: 52px;
+            line-height: 52px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="con">
+        <h1>国内疫情</h1>
+        <ul>
+            <li>
+                <p class="number">12345</p>
+                <p class="texts">确诊</p>
+                <p class="textInfo">较昨日 +23</p>
+            </li>
+            <li>
+                <p class="number">12345</p>
+                <p class="texts">疑似</p>
+                <p class="textInfo">较昨日 +23</p>
+            </li>
+            <li>
+                <p class="number">12345</p>
+                <p class="texts">治愈</p>
+                <p class="textInfo">较昨日 +23</p>
+            </li>
+            <li>
+                <p class="number">12345</p>
+                <p class="texts">死亡</p>
+                <p class="textInfo">较昨日 +23</p>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

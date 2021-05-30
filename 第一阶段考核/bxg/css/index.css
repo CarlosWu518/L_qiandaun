@@ -1,0 +1,87 @@
+/* 版心 */
+
+.typeArea {
+    width: 1190px;
+    margin: 0 auto;
+}
+
+
+/* 顶部广告栏  */
+
+.topAdColumn {
+    width: 100%;
+    height: 31px;
+    background-color: #F7F7F7;
+}
+
+.topAdColumn .topAC_title {
+    line-height: 31px;
+}
+
+.topAdColumn .topAC_title p {
+    float: left;
+    margin-left: 15px;
+}
+
+.topAdColumn .topAC_title p:nth-of-type(-n+2) {
+    color: #999999;
+}
+
+.topAdColumn .topAC_title p:last-of-type {
+    color: #333;
+}
+
+
+/* logo头部区域 */
+
+.header {
+    height: 76px;
+    line-height: 76px;
+    background-color: #fff;
+}
+
+.header .logo {
+    float: left;
+    font-size: 0px;
+}
+
+.header ul li {
+    float: right;
+    color: #000;
+    font-size: 14px;
+    margin: 0 10px;
+}
+
+
+/* 导航栏区域 */
+
+.navbar {
+    height: 42px;
+}
+
+.navbar .navAll .title {
+    float: left;
+    width: 230px;
+    height: 100%;
+    line-height: 42px;
+    text-align: center;
+    font-size: 16px;
+    color: #000;
+    background-color: #3492fd;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.navbar .navList {
+    float: left;
+    margin-left: 20px;
+    height: 100%;
+}
+
+.navbar .navList li {
+    float: left;
+    line-height: 42px;
+    font-size: 16px;
+    color: #000;
+    margin: 0 20px;
+}
